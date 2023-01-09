@@ -35,7 +35,7 @@ This project focuses on the optimization of scheduling for train captains at the
 ## Problem Definition
 
 ### Noun Definition
-1. Crew schedule: A shift is the work schedule for a train captain for a given day.
+1. Crew schedule: A crew schedule is the work schedule for a train captain for a given day.
 2. Duty: Duty refers to train service x, which departs from location A at a specific time and arrives at location B at a specific time.
 3. Rest period: The time interval between two duties, during which the train captain must remain at the station but is not counted as working hours."
 
@@ -44,8 +44,8 @@ This project focuses on the optimization of scheduling for train captains at the
 Scheduling for train captains is currently done manually based on experience, and creating an optimal schedule is a highly complex problem. The reasons for this are as follows:
 
 >- Train departure times are fixed and cannot be changed, so employees must work within these time constraints.
->- Scheduling must take into account spatial factors, meaning that the starting and ending locations for a shift should be the same, and that employees should return to their starting location at the end of a shift that spans multiple days.
->- Overtime pay is required for shifts that exceed 400 minutes, but train captains are paid a monthly salary. As a result, the company would prefer for shifts to be close to but not exceed 400 minutes.
+>- Scheduling must take into account spatial factors, meaning that the starting and ending locations for a crew schedule should be the same, and that employees should return to their starting location at the end of a crew schedule that spans multiple days.
+>- Overtime pay is required for crew schedules that exceed 400 minutes, but train captains are paid a monthly salary. As a result, the company would prefer for crew schedules to be close to but not exceed 400 minutes.
 
 The following factors contribute to poor work quality as a result of scheduling:
 
@@ -53,25 +53,25 @@ The following factors contribute to poor work quality as a result of scheduling:
 >*If rest periods are too short, train captains do not have enough time to rest.
 If rest periods are too long, the company is unable to effectively use its workforce, requiring more employees to cover train service.*
 For train captains, long rest periods are also unproductive and unpaid.
-> - **Significant variation in the length of shifts**
-*There may be shifts that last 12 hours and others that last only 2 hours.*
+> - **Significant variation in the length of crew schedules**
+*There may be crew schedules that last 12 hours and others that last only 2 hours.*
 >- **Total working hours that are too short or too long**
 
 ### Solution Proposal
 
-- There should not be too much time between duties within a shift.
-- There should not be too much variation in the length of shifts.
-- The total length of a shift should not be too long or too short.
+- There should not be too much time between duties within a crew schedule
+- There should not be too much variation in the length of crew schedules.
+- The total length of a crew schedule should not be too long or too short.
 - There should be appropriate rest periods between duties.
 
 
 ## Mathematical models
 - Rest periods are counted as working hours.
-- Overtime pay is available for shifts that exceed 400 minutes.
+- Overtime pay is available for crew schedules that exceed 400 minutes.
 
 ### Decision Valuable
 
-- $x^{t}_{d,i}$: A binary decision variable that indicates whether train service t is the i-th train service of shift d.
+- $x^{t}_{d,i}$: A binary decision variable that indicates whether train service t is the i-th train service of crew schedule d.
 Where $𝑡∈𝑇，𝑑∈D，𝑖∈𝐼$.
 
 
@@ -123,21 +123,21 @@ Case 2: For duty 2, the right side of the equation is not zero, so there is no c
 
 ### Objective Fuction
 
-**The objective function is minimized by: (overtime pay * overtime hours) + (base salary * number of work shifts)**.
+**The objective function is minimized by: (overtime pay * overtime hours) + (base salary * number of Crew schedules)**.
 - If the work exceeds 400 minutes, the overtime hours in the objective function will increase. 
 - If an employee works for a shorter time, it is still equivalent to working for 400 minutes, and a shorter work time usually means more manpower is needed to complete the schedule, so the value of the objective function is likely to increase. The above two points tend to give each employee almost 400 minutes of work time.
 
 
 ## Contributing 
 
-- The number of work shifts has decreased from 73 to 59.
+- The number of crew schedules has decreased from 73 to 59.
 - Resulting in a 25% decrease in labor costs.
 
 ## Future Work
 
 - The actual schedule can be split, but the schedule being solved for cannot be split.
 
-- More human-centered design, such as the rest time between two shifts, can be considered.
+- More human-centered design, such as the rest time between two crew schedules, can be considered.
 
 
 ## Release History
