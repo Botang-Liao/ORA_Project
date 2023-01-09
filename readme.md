@@ -72,7 +72,7 @@ For train captains, long rest periods are also unproductive and unpaid.
 ### Decision Valuable
 
 - $x^{t}_{d,i}$: A binary decision variable that indicates whether train service t is the i-th train service of shift d.
-Where $𝑡∈𝑇，𝑑∈D{𝑝,𝑞}，𝑝,𝑞∈𝑂，𝑖∈𝐼$.
+Where $𝑡∈𝑇，𝑑∈D，𝑖∈𝐼$.
 
 
 
@@ -80,30 +80,42 @@ Where $𝑡∈𝑇，𝑑∈D{𝑝,𝑞}，𝑝,𝑞∈𝑂，𝑖∈𝐼$.
 
 - $\sum_{𝑡∈𝑇}{x^{t}{d,i}\le 1}$: Ensures that each duty is assigned to only one train service.
 
--  $\sum{𝑡∈𝑇}{x^{t}{d,i}}$ $\ge$ $\sum{𝑡∈𝑇}{x^{t}_{d,i+1}}$: Ensures that the n+1 duty is only selected if the n duty is selected.
+-  $\sum_{𝑡∈𝑇}{x^{t}{d,i}}$ $\ge$ $\sum_{𝑡∈𝑇}{x^{t}_{d,i+1}}$: Ensures that the n+1 duty is only selected if the n duty is selected.
 
 - Spatial and Time constraint
 we will discuss two cases time and spatial constraint formulas
+
 Case 1: Considering the continuity of train services
-![限制式狀況1](https://i.imgur.com/mUfwwTN.png)
+
+![](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_74579f0c9e211ae77a10719766b9cee6.png)x
+
 Case 2: Considering the end of a duty
-![限制式狀況2](https://i.imgur.com/tKVVtwG.png)
 
-    - Spatial constraint: $\sum_{𝑡∈𝑇}ES_t*x^{t}_{d,i}+M(1-\sum_{𝑡∈𝑇}x^{t}_{d,i+1})$ $\ge$ $\sum_{𝑡∈𝑇}SS_t*x^{t}_{d,i+1}$
-    Where $ES_t$ is the arrival station of train service t, and $SS_t$ is the departure station of train service t.
+![](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_d7d76b72e6318e66ac127c6248298b11.png)
 
-        The following is an analysis of the spatial constraint formula:
+#### Spatial constraint: 
 
-        Case 1: For duty 1, the right side of the equation is zero, so the arrival location of duty 1 must be the same as the starting location of duty 2.
-        Case 2: For duty 2, the right side of the equation is not zero, so there is no constraint between duties 2 and 3.
+![image](https://user-images.githubusercontent.com/83536674/211263677-401e68ff-7b88-4d8c-af71-b1db4305b5de.png)
 
-    -  Time constraint: $\sum_{𝑡∈𝑇}(ET_t+SP)*x^{t}{d,i}-M(1-\sum_{𝑡∈𝑇}x^{t}_{d,i+1})$ $\le$ $\sum_{𝑡∈𝑇}(ST_t-SP)*x^{t}_{d,i+1}$
-    Where ET and ST are the departure and arrival times of the train service, and SP is the time for boarding and disembarking.
 
-        The following is an analysis of the time constraint formula:
 
-        Case 1: For duty 1, the right side of the equation is zero, so the arrival time of duty 1 plus the boarding and disembarking time should be less than or equal to the starting time of duty 2.
-        Case 2: For duty 2, the right side of the equation is not zero, so there is no constraint between duties 2 and 3.
+Where $ES_t$ is the arrival station of train service t, and $SS_t$ is the departure station of train service t.
+
+The following is an analysis of the spatial constraint formula:
+
+Case 1: For duty 1, the right side of the equation is zero, so the arrival location of duty 1 must be the same as the starting location of duty 2.
+Case 2: For duty 2, the right side of the equation is not zero, so there is no constraint between duties 2 and 3.
+
+#### Time constraint: 
+
+![image](https://user-images.githubusercontent.com/83536674/211263820-78564915-de01-4600-a6e7-743e3e6eba9b.png)
+
+Where ET and ST are the departure and arrival times of the train service, and SP is the time for boarding and disembarking.
+
+The following is an analysis of the time constraint formula:
+
+Case 1: For duty 1, the right side of the equation is zero, so the arrival time of duty 1 plus the boarding and disembarking time should be less than or equal to the starting time of duty 2.
+Case 2: For duty 2, the right side of the equation is not zero, so there is no constraint between duties 2 and 3.
 
 
 
@@ -118,7 +130,7 @@ Case 2: Considering the end of a duty
 
 ## Contributing 
 
--  The number of work shifts has decreased from 73 to 59.
+- The number of work shifts has decreased from 73 to 59.
 - Resulting in a 25% decrease in labor costs.
 
 ## Future Work
