@@ -10,12 +10,12 @@ This project focuses on the optimization of scheduling for train captains at the
 ```
 ─ORA_term_project/
     └─code/
-        ├─term_project.py
-        ├─draw_result.ipynb
-        ├─TRA.csv 
+    |   ├─term_project.py
+    |   ├─draw_result.ipynb
+    |   ├─TRA.csv 
     └─doc/    
-        ├─presentation.pptx
-        ├─Mathematical_models.pdf
+    |   ├─presentation.pptx
+    |   ├─Mathematical_models.pdf
     └─result/
         ├─工作班_0.png 
            :
