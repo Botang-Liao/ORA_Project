@@ -25,7 +25,7 @@ This project focuses on the optimization of scheduling for train captains at the
 - term_project.py
     > the code is used to this term project
 - draw_result.ipynb
-    > thes coe is used to generate the pictures from the result in our mathematical models.
+    > the code is used to generate the pictures from the result in our mathematical model.
 - TRA.csv
     > the data of Taiwan Railways Administration
 - presentation.pptx
