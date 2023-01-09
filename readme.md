@@ -85,29 +85,37 @@ Where $𝑡∈𝑇，𝑑∈D，𝑖∈𝐼$.
 - Spatial and Time constraint
 we will discuss two cases time and spatial constraint formulas
 
-    - Case 1: Considering the continuity of train services
+Case 1: Considering the continuity of train services
 
-    ![image](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_74579f0c9e211ae77a10719766b9cee6.png)
+![](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_74579f0c9e211ae77a10719766b9cee6.png)x
 
-    - Case 2: Considering the end of a duty
+Case 2: Considering the end of a duty
 
-    ![image](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_d7d76b72e6318e66ac127c6248298b11.png)
+![](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_d7d76b72e6318e66ac127c6248298b11.png)
 
-    - Spatial constraint: $\sum_{𝑡∈𝑇}ES_t*x^{t}_{d,i}+M(1-\sum_{𝑡∈𝑇}x^{t}_{d,i+1})$ $\ge$ $\sum_{𝑡∈𝑇}SS_t*x^{t}_{d,i+1}$
-    Where $ES_t$ is the arrival station of train service t, and $SS_t$ is the departure station of train service t.
+#### Spatial constraint: 
 
-        The following is an analysis of the spatial constraint formula:
+![image](https://user-images.githubusercontent.com/83536674/211263677-401e68ff-7b88-4d8c-af71-b1db4305b5de.png)
 
-        Case 1: For duty 1, the right side of the equation is zero, so the arrival location of duty 1 must be the same as the starting location of duty 2.
-        Case 2: For duty 2, the right side of the equation is not zero, so there is no constraint between duties 2 and 3.
 
-    -  Time constraint: $\sum_{𝑡∈𝑇}(ET_t+SP)*x^{t}{d,i}-M(1-\sum_{𝑡∈𝑇}x^{t}_{d,i+1})$ $\le$ $\sum_{𝑡∈𝑇}(ST_t-SP)*x^{t}_{d,i+1}$
-    Where ET and ST are the departure and arrival times of the train service, and SP is the time for boarding and disembarking.
 
-        The following is an analysis of the time constraint formula:
+Where $ES_t$ is the arrival station of train service t, and $SS_t$ is the departure station of train service t.
 
-        Case 1: For duty 1, the right side of the equation is zero, so the arrival time of duty 1 plus the boarding and disembarking time should be less than or equal to the starting time of duty 2.
-        Case 2: For duty 2, the right side of the equation is not zero, so there is no constraint between duties 2 and 3.
+The following is an analysis of the spatial constraint formula:
+
+Case 1: For duty 1, the right side of the equation is zero, so the arrival location of duty 1 must be the same as the starting location of duty 2.
+Case 2: For duty 2, the right side of the equation is not zero, so there is no constraint between duties 2 and 3.
+
+#### Time constraint: 
+
+![image](https://user-images.githubusercontent.com/83536674/211263820-78564915-de01-4600-a6e7-743e3e6eba9b.png)
+
+Where ET and ST are the departure and arrival times of the train service, and SP is the time for boarding and disembarking.
+
+The following is an analysis of the time constraint formula:
+
+Case 1: For duty 1, the right side of the equation is zero, so the arrival time of duty 1 plus the boarding and disembarking time should be less than or equal to the starting time of duty 2.
+Case 2: For duty 2, the right side of the equation is not zero, so there is no constraint between duties 2 and 3.
 
 
 
