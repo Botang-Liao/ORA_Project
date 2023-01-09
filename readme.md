@@ -93,7 +93,7 @@ Case 2: Considering the end of a duty
 
 ![](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_d7d76b72e6318e66ac127c6248298b11.png)
 
-    - Spatial constraint: $\sum_{𝑡∈𝑇}ES_t*x^{t}_{d,i}+M(1-\sum_{𝑡∈𝑇}x^{t}_{d,i+1})$ $\ge$ $\sum_{𝑡∈𝑇}SS_t*x^{t}_{d,i+1}$
+    - Spatial constraint: $\sum_{𝑡∈𝑇}(ES_t*x^{t}_{d,i}+M(1-\sum_{𝑡∈𝑇}x^{t}_{d,i+1})$ $\ge$ $\sum_{𝑡∈𝑇}SS_t*x^{t}_{d,i+1}$
     Where $ES_t$ is the arrival station of train service t, and $SS_t$ is the departure station of train service t.
 
         The following is an analysis of the spatial constraint formula:
