@@ -85,13 +85,13 @@ Where $𝑡∈𝑇，𝑑∈D，𝑖∈𝐼$.
 - Spatial and Time constraint
 we will discuss two cases time and spatial constraint formulas
 
-Case 1: Considering the continuity of train services
+    - Case 1: Considering the continuity of train services
 
-![](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_74579f0c9e211ae77a10719766b9cee6.png)
+        ![](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_74579f0c9e211ae77a10719766b9cee6.png)
 
-Case 2: Considering the end of a duty
+    - Case 2: Considering the end of a duty
 
-![](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_d7d76b72e6318e66ac127c6248298b11.png)
+        ![](https://playlab.computing.ncku.edu.tw:3001/uploads/upload_d7d76b72e6318e66ac127c6248298b11.png)
 
     - Spatial constraint: $\sum_{𝑡∈𝑇}ES_t*x^{t}_{d,i}+M(1-\sum_{𝑡∈𝑇}x^{t}_{d,i+1})$ $\ge$ $\sum_{𝑡∈𝑇}SS_t*x^{t}_{d,i+1}$
     Where $ES_t$ is the arrival station of train service t, and $SS_t$ is the departure station of train service t.
