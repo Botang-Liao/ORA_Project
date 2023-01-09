@@ -72,7 +72,7 @@ For train captains, long rest periods are also unproductive and unpaid.
 ### Decision Valuable
 
 - $x^{t}_{d,i}$: A binary decision variable that indicates whether train service t is the i-th train service of shift d.
-Where $𝑡∈𝑇，𝑑∈D{𝑝,𝑞}，𝑝,𝑞∈𝑂，𝑖∈𝐼$.
+Where $𝑡∈𝑇，𝑑∈D，𝑖∈𝐼$.
 
 
 
@@ -80,7 +80,7 @@ Where $𝑡∈𝑇，𝑑∈D{𝑝,𝑞}，𝑝,𝑞∈𝑂，𝑖∈𝐼$.
 
 - $\sum_{𝑡∈𝑇}{x^{t}{d,i}\le 1}$: Ensures that each duty is assigned to only one train service.
 
--  $\sum_{𝑡∈𝑇}{x^{t}{d,i}}$ $\ge$ $\sum{𝑡∈𝑇}{x^{t}_{d,i+1}}$: Ensures that the n+1 duty is only selected if the n duty is selected.
+-  $\sum_{𝑡∈𝑇}{x^{t}{d,i}}$ $\ge$ $\sum_{𝑡∈𝑇}{x^{t}_{d,i+1}}$: Ensures that the n+1 duty is only selected if the n duty is selected.
 
 - Spatial and Time constraint
 we will discuss two cases time and spatial constraint formulas
