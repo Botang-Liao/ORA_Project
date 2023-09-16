@@ -1,9 +1,9 @@
-# ORA Project : The optimal scheduling problem for train captains at the Taiwan Railways Administration.
+# ORA Project : The optimal scheduling problem for conductor at the Taiwan Railways Administration.
 ###### tags: `ORA`、`Project`
 
 > This project is the final project for the Operations Research Applications and Implementation Course at National Cheng Kung University.
 
-This project focuses on the optimization of scheduling for train captains at the Taiwan Railways Administration.
+This project focuses on the optimization of scheduling for conductor at the Taiwan Railways Administration.
 
 
 - File in this project
@@ -35,24 +35,24 @@ This project focuses on the optimization of scheduling for train captains at the
 ## Problem Definition
 
 ### Noun Definition
-1. Crew schedule: A crew schedule is the work schedule for a train captain for a given day.
+1. Crew schedule: A crew schedule is the work schedule for a conductor for a given day.
 2. Duty: Duty refers to train service x, which departs from location A at a specific time and arrives at location B at a specific time.
-3. Rest period: The time interval between two duties, during which the train captain must remain at the station but is not counted as working hours."
+3. Rest period: The time interval between two duties, during which the conductor must remain at the station but is not counted as working hours."
 
 ### Problem Description
 
-Scheduling for train captains is currently done manually based on experience, and creating an optimal schedule is a highly complex problem. The reasons for this are as follows:
+Scheduling for conductor is currently done manually based on experience, and creating an optimal schedule is a highly complex problem. The reasons for this are as follows:
 
 >- Train departure times are fixed and cannot be changed, so employees must work within these time constraints.
 >- Scheduling must take into account spatial factors, meaning that the starting and ending locations for a crew schedule should be the same, and that employees should return to their starting location at the end of a crew schedule that spans multiple days.
->- Overtime pay is required for crew schedules that exceed 400 minutes, but train captains are paid a monthly salary. As a result, the company would prefer for crew schedules to be close to but not exceed 400 minutes.
+>- Overtime pay is required for crew schedules that exceed 400 minutes, but conductors are paid a monthly salary. As a result, the company would prefer for crew schedules to be close to but not exceed 400 minutes.
 
 The following factors contribute to poor work quality as a result of scheduling:
 
 > - **Rest periods that are too short or too long**
->*If rest periods are too short, train captains do not have enough time to rest.
+>*If rest periods are too short, conductors do not have enough time to rest.
 If rest periods are too long, the company is unable to effectively use its workforce, requiring more employees to cover train service.*
-For train captains, long rest periods are also unproductive and unpaid.
+For train conductors, long rest periods are also unproductive and unpaid.
 > - **Significant variation in the length of crew schedules**
 *There may be crew schedules that last 12 hours and others that last only 2 hours.*
 >- **Total working hours that are too short or too long**
